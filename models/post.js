@@ -1,43 +1,42 @@
-const { Model, DataTypes } = require('sequelize'); // import sequelize (https://sequelize.org/docs/v6/core-concepts/model-basics/)
-const sequelize = require('../config/connection'); // import connection object from connection.js (https://sequelize.org/docs/v6/core-concepts/connections-and-transactions/)
+const { Model, DataTypes } = require('sequelize'); // import sequelize 
+const sequelize = require('../config/connection'); // import connection object from connection.js 
 
-class Post extends Model { } // Post model (https://sequelize.org/docs/v6/core-concepts/model-basics/)
+class Post extends Model { } // Post model 
 
-Post.init(  // Post model (https://sequelize.org/docs/v6/core-concepts/model-basics/)
+Post.init(  // Post model 
   {
-    id: { // Post model (https://sequelize.org/docs/v6/core-concepts/model-basics/) (https://sequelize.org/docs/v6/core-concepts/model-basics/#column-options)
-      type: DataTypes.INTEGER, // data type (https://sequelize.org/master/identifiers.html) (https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
-      allowNull: false, // allow null (https://sequelize.org/docs/v6/core-concepts/model-basics/#allowing-nulls) (https://sequelize.org/docs/v6/core-concepts/model-basics/#primary-keys) 
-      primaryKey: true, // primary key (https://sequelize.org/docs/v6/core-concepts/model-basics/#primary-keys) (https://sequelize.org/docs/v6/core-concepts/model-basics/#auto-incrementing)
-      autoIncrement: true, // auto increment (https://sequelize.org/docs/v6/core-concepts/model-basics/#auto-incrementing) 
+    id: { // Post model 
+      type: DataTypes.INTEGER, // data type 
+      allowNull: false, // allow null 
+      autoIncrement: true, // auto increment 
     },
-    title: { // title column (https://sequelize.org/docs/v6/core-concepts/model-basics/#column-options) (https://sequelize.org/docs/v6/core-concepts/model-basics/#uniques)
-      type: DataTypes.STRING, // data type (https://sequelize.org/master/identifiers.html) (https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
-      allowNull: false, // allow null (https://sequelize.org/docs/v6/core-concepts/model-basics/#allowing-nulls) (https://sequelize.org/docs/v6/core-concepts/model-basics/#uniques)
+    title: { // title column (
+      type: DataTypes.STRING, // data type 
+      allowNull: false, // allow null
     },
-    content: { // content column (https://sequelize.org/docs/v6/core-concepts/model-basics/#column-options) (https://sequelize.org/docs/v6/core-concepts/model-basics/#uniques)
-      type: DataTypes.STRING, // data type (https://sequelize.org/master/identifiers.html) (https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
-      allowNull: false, // allow null (https://sequelize.org/docs/v6/core-concepts/model-basics/#allowing-nulls) (https://sequelize.org/docs/v6/core-concepts/model-basics/#uniques)
+    content: { // content column 
+      type: DataTypes.STRING, // data type 
+      allowNull: false, // allow null 
     },
-    creator: {  // foreign key for username (https://sequelize.org/docs/v6/core-concepts/assocs/#foreign-keys)
-      type: DataTypes.STRING, // data type (https://sequelize.org/master/identifiers.html) (https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
-      references: { // references (https://sequelize.org/docs/v6/core-concepts/assocs/#foreign-keys) (https://sequelize.org/docs/v6/core-concepts/assocs/#foreign-keys)
-        model: 'user', // model (https://sequelize.org/docs/v6/core-concepts/assocs/#foreign-keys) (https://sequelize.org/docs/v6/core-concepts/assocs/#foreign-keys)
-        key: 'username', // key (https://sequelize.org/docs/v6/core-concepts/assocs/#foreign-keys) (https://sequelize.org/docs/v6/core-concepts/assocs/#foreign-keys)
+    creator: {  // foreign key for username 
+      type: DataTypes.STRING, // data type 
+      references: { // references 
+        model: 'user', // model 
+        key: 'username', // key 
       }
     },
-    date_created: { // date created column (https://sequelize.org/docs/v6/core-concepts/model-basics/#column-options) (https://sequelize.org/docs/v6/core-concepts/model-basics/#uniques)
-      type: DataTypes.DATE, // data type (https://sequelize.org/master/identifiers.html) (https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
-      allowNull: false, // allow null (https://sequelize.org/docs/v6/core-concepts/model-basics/#allowing-nulls) (https://sequelize.org/docs/v6/core-concepts/model-basics/#uniques)
-      defaultValue: DataTypes.NOW, // records date/time at time of creation (https://sequelize.org/docs/v6/core-concepts/model-basics/#default-values)
+    date_created: { // date created column 
+      type: DataTypes.DATE, // data type 
+      allowNull: false, // allow null 
+      defaultValue: DataTypes.NOW, // records date/time at time of post creation
     },
   },
   {
-    sequelize, // for connecting to db with sequelize (default is ./config/connection.js) (https://sequelize.org/docs/v6/core-concepts/model-basics/)
-    freezeTableName: true, // for connecting to db with sequelize (default is ./config/connection.js) (https://sequelize.org/docs/v6/core-concepts/model-basics/)
-    underscored: true, // for connecting to db with sequelize (default is ./config/connection.js) (https://sequelize.org/docs/v6/core-concepts/model-basics/) 
-    modelName: 'post', // for connecting to db with sequelize (default is ./config/connection.js) (https://sequelize.org/docs/v6/core-concepts/model-basics/)
+    sequelize, // for connecting to db with sequelize 
+    freezeTableName: true, // for connecting to db with sequelize 
+    underscored: true, // 
+    modelName: 'post', // for connecting with sequelize 
   }
 );
 
-module.exports = Post; // export Post model (https://sequelize.org/docs/v6/core-concepts/model-basics/) (https://sequelize.org/docs/v6/core-concepts/model-basics/)
+module.exports = Post; // export Post model 
