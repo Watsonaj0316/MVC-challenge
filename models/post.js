@@ -3,14 +3,15 @@ const sequelize = require('../config/connection'); // import connection object f
 
 class Post extends Model { } // Post model 
 
-Post.init(  // Post model 
+Post.init(  // Post model initialization
   {
-    id: { // Post model 
+    id: { // id column 
       type: DataTypes.INTEGER, // data type 
       allowNull: false, // allow null 
       autoIncrement: true, // auto increment 
+      primaryKey: true // primary key 
     },
-    title: { // title column (
+    title: { // title column 
       type: DataTypes.STRING, // data type 
       allowNull: false, // allow null
     },
