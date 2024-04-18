@@ -50,6 +50,10 @@ This project is a blog site for tech developers! The motivation for this project
 10. Enter login/logout/signup requests as you please, create a new blog post, or update/delete an existing one, or add comments to blog posts. 
 11. When finished, run CONTROL-C in the terminal to stop Nodemon and trash the session.
 
+
+## Screenshot
+![screenshot](IMG_7154.jpg)
+
 ## Contact
 For any inquiries, please contact:
 Email: watsonalyece33@gmail.com
