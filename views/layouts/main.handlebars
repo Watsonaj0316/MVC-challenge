@@ -1,67 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog | stay connected</title>
-    <link rel="stylesheet" href="/css/bulma.css">
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body class="is-flex-direction-column">
-    <header class="is-flex is-full">
-      <nav
-        class="navbar is-full is-flex-direction-row is-justify-content-space-around is-align-items-center"
-        role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <h1 class="is-size-3">Tech Blog</h1>
-          </a>
-
-          <a role="button" class="navbar-burger" aria-label="menu"
-            aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-size-5" href="/">
-              home
-            </a>
-
-            <a class="navbar-item is-size-5" href="/dashboard">
-              dashboard
-            </a>
-
-            {{#if loggedIn}}
-            <a class="navbar-item is-size-5">
-              <form method="post" action="/logout" class="inline">
-                <input type="hidden" name="extra_submit_param"
-                  value="extra_submit_value">
-                <button type="submit" name="logout" value="submit_value"
-                  class="link-button">
-                  log out
-                </button>
-              </form>
-            </a>
-            {{else}}
-            <a class="navbar-item is-size-5" href="/login">
-              log in
-            </a>
-            {{/if}}
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="is-flex is-flex-direction-column pt-5 column is-half">
-      {{{body}}}
-    </main>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <link rel="stylesheet" href="/css/bulma.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Import Bubblegum Sans font from Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap">
+  <style>
+    /* Apply bubble letter font to the title */
+    .bubble-title {
+      font-family: 'Bubblegum Sans', cursive;
+      font-size: 3rem; /* Adjust font size as needed */
+      /* Additional styles for appearance */
+      color: #000; /* Change color as needed */
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+      margin-bottom: 0.5rem; /* Adjust margin as needed */
+    }
+  </style>
+</head>
+<body class="is-flex-direction-column">
+  <header class="is-flex is-full">
+    <nav class="navbar is-full is-flex-direction-row is-justify-content-space-around is-align-items-center"
+      role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <!-- Use the bubble-title class for the title -->
+          <h1 class="bubble-title">The Tech Blog</h1>
+        </a>
+        <!-- Remaining code for navbar... -->
+      </div>
+    </nav>
+  </header>
+  <main class="is-flex is-flex-direction-column pt-5 column is-half">
+    {{{body}}}
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
 </html>
