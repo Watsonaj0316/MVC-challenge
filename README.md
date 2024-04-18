@@ -51,7 +51,7 @@ This project is a blog site for tech developers! The motivation for this project
 
 ## Screenshot
 
-![Screenshot](public/IMG_7154.jpg)
+![Screenshot](public/IMG_7157.jpg)
 
 ## Contact
 For any inquiries, please contact:
