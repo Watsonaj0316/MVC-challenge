@@ -20,7 +20,7 @@ This project is a blog site for tech developers! The motivation for this project
 - Node.js
 - Git
 - Heroku
-- Insomnia
+
 
 ### NPM Packages:
 - nodemon
@@ -44,11 +44,9 @@ This project is a blog site for tech developers! The motivation for this project
 4. Open the "server.js" file in your integrated terminal. 
 5. Run the command `npm run seed` (or `node seeds/index.js`) to seed the database if desired.
 6. Run the command `npm run start` (or `node server.js`). Alternatively, if you have Nodemon installed, run `npm run watch` (or `nodemon server.js`). 
-7. Open Insomnia and type in "localhost:3001/api/_" in the address bar. Replace underscore with 'products', 'categories', or 'tags'.
-8. Enter get, post, delete, or put requests as you please. 
 9. Open 'localhost:3001' in your browser and see the site in action.
 10. Enter login/logout/signup requests as you please, create a new blog post, or update/delete an existing one, or add comments to blog posts. 
-11. When finished, run CONTROL-C in the terminal to stop Nodemon and trash the session.
+
 
 
 ## Screenshot
