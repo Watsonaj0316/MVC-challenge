@@ -41,9 +41,8 @@ This project is a blog site for tech developers! The motivation for this project
    - DB_USER=''
    - DB_PW=''
    - DB_SESSION_SECRET=''
-4. Open the "server.js" file in your integrated terminal. 
-5. Run the command `npm run seed` (or `node seeds/index.js`) to seed the database if desired.
-6. Run the command `npm run start` (or `node server.js`). Alternatively, if you have Nodemon installed, run `npm run watch` (or `nodemon server.js`). 
+4. Open the "server.js" file in your integrated terminal.
+5. Run node server.js 
 9. Open 'localhost:3001' in your browser and see the site in action.
 10. Enter login/logout/signup requests as you please, create a new blog post, or update/delete an existing one, or add comments to blog posts. 
 
